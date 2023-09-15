@@ -1,14 +1,14 @@
-using MagicVilla_VillaAPI.Logging;
-using Serilog;
+
+using MagicVilla_VillaAPI.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-Log.Logger = new LoggerConfiguration().MinimumLevel.Debug()
-    .WriteTo.File("log/villaLogs.txt", rollingInterval: RollingInterval.Day).CreateLogger();
-
-builder.Host.UseSerilog();
-
 // Add services to the container.
+
+builder.Services.AddDbContext<AppDbContext>(option => {
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
+});
 builder.Services.AddControllers(option => {
     //option.ReturnHttpNotAcceptable=true;
 }).AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
@@ -16,7 +16,6 @@ builder.Services.AddControllers(option => {
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<ILogging, LoggingV2>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
