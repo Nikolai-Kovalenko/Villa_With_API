@@ -35,3 +35,13 @@ F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Microsoft.
 F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
 F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Serilog.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Serilog.AspNetCore.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net7.0\Serilog.Sinks.File.dll
