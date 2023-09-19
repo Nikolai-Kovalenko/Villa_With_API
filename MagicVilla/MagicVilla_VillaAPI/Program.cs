@@ -13,6 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(option => {
 });
 
 builder.Services.AddScoped<IVillaRepository, VillaRepository>();
+builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>();
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 
