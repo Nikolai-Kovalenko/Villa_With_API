@@ -14,15 +14,15 @@ namespace MagicVilla_VillaAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<VillaNumber>().HasData(
+/*            modelBuilder.Entity<VillaNumber>().HasData(
                 new VillaNumber
                 {
-                    VillaNo = 101,
+                    VillaNo = 167,
                     VillaID = 1, 
                     SpecialDetails = "Details",
                     CreatedDate = DateTime.Now
                 });
-
+*/
             modelBuilder.Entity<Villa>().HasData(
                 new Villa
                 {
