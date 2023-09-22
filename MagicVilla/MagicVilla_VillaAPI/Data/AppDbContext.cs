@@ -18,6 +18,7 @@ namespace MagicVilla_VillaAPI.Data
                 new VillaNumber
                 {
                     VillaNo = 101,
+                    VillaID = 1, 
                     SpecialDetails = "Details",
                     CreatedDate = DateTime.Now
                 });

@@ -19,14 +19,16 @@ namespace MagicVilla_VillaAPI.Controllers
     {
        
         private readonly IVillaNumberRepository _dbVillaNum;
+        private readonly IVillaRepository _dbVilla;
         public IMapper _mapper { get; set; }
         protected APIResponse _response;
 
-        public VillaNumberController(IVillaNumberRepository dbVillaNum, IMapper mapper)
+        public VillaNumberController(IVillaNumberRepository dbVillaNum, IMapper mapper, IVillaRepository dbVilla)
         {
             _dbVillaNum = dbVillaNum;
             _mapper = mapper;
             this._response = new();
+            _dbVilla = dbVilla;
         }
 
         [HttpGet]
@@ -99,6 +101,13 @@ namespace MagicVilla_VillaAPI.Controllers
                     ModelState.AddModelError("CustomError", "VillaNumber already Exist!");
                     return BadRequest(ModelState);
                 }
+
+                if(await _dbVilla.GetAsync(u => u.Id == creatrDTO.VillaId) == null)
+                {
+                    ModelState.AddModelError("CustomError", "Villa Id is InValid!");
+                    return BadRequest(ModelState);
+                }
+
                 if (creatrDTO == null)
                 {
                     return BadRequest(creatrDTO);
@@ -165,6 +174,12 @@ namespace MagicVilla_VillaAPI.Controllers
                 if (updateDTO == null || id != updateDTO.VillaNo)
                 {
                     return BadRequest();
+                }
+
+                if (await _dbVilla.GetAsync(u => u.Id == updateDTO.VillaId) == null)
+                {
+                    ModelState.AddModelError("CustomError", "Villa Id is InValid!");
+                    return BadRequest(ModelState);
                 }
 
                 VillaNumber villaNum = _mapper.Map<VillaNumber>(updateDTO);
