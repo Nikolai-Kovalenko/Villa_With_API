@@ -29,3 +29,8 @@ F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\obj\Debug\net7.0\refint\MagicVil
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\obj\Debug\net7.0\MagicVilla_Web.pdb
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\obj\Debug\net7.0\MagicVilla_Web.genruntimeconfig.cache
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\obj\Debug\net7.0\ref\MagicVilla_Web.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\AutoMapper.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\MagicVilla_Utility.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\MagicVilla_Utility.pdb
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\obj\Debug\net7.0\MagicVilla_Web.csproj.CopyComplete
