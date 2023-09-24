@@ -15,7 +15,7 @@ namespace MagicVilla_VillaAPI.Controllers
 {
     [Route("api/VillaNumberAPI")]
     [ApiController]
-    public class VillaNumberController : ControllerBase
+    public class VillaNumberAPIController : ControllerBase
     {
        
         private readonly IVillaNumberRepository _dbVillaNum;
@@ -23,7 +23,7 @@ namespace MagicVilla_VillaAPI.Controllers
         public IMapper _mapper { get; set; }
         protected APIResponse _response;
 
-        public VillaNumberController(IVillaNumberRepository dbVillaNum, IMapper mapper, IVillaRepository dbVilla)
+        public VillaNumberAPIController(IVillaNumberRepository dbVillaNum, IMapper mapper, IVillaRepository dbVilla)
         {
             _dbVillaNum = dbVillaNum;
             _mapper = mapper;
@@ -37,7 +37,7 @@ namespace MagicVilla_VillaAPI.Controllers
         {
             try
             {
-                IEnumerable<VillaNumber> villaNumList = await _dbVillaNum.GetAllAsync();
+                IEnumerable<VillaNumber> villaNumList = await _dbVillaNum.GetAllAsync(includeProperties:"Villa");
                 _response.Result = _mapper.Map<List<VillaNumberDTO>>(villaNumList);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);
