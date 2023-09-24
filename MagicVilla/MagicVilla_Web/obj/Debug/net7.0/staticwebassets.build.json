@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HGfm61DD3MOugRwCRLCNSG1vQub3EmxFVk7xR3UpNVs=",
+  "Hash": "oAuktMrXD1BN3ZfNZRkMGxB2217fAYHK/MAXxml/g04=",
   "Source": "MagicVilla_Web",
   "BasePath": "_content/MagicVilla_Web",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\MagicVilla_Web.bundle.scp.css"
     },
     {
+      "Identity": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\css\\Bootswatch_Cyborg.css",
+      "SourceId": "MagicVilla_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\",
+      "BasePath": "_content/MagicVilla_Web",
+      "RelativePath": "css/Bootswatch_Cyborg.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Bootswatch_Cyborg.css"
+    },
+    {
       "Identity": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\css\\site.css",
       "SourceId": "MagicVilla_Web",
       "SourceType": "Discovered",
@@ -83,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\images\\home\\Miami-Villa-Contenta-1.jpg",
+      "SourceId": "MagicVilla_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\",
+      "BasePath": "_content/MagicVilla_Web",
+      "RelativePath": "images/home/Miami-Villa-Contenta-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home\\Miami-Villa-Contenta-1.jpg"
+    },
+    {
+      "Identity": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\images\\home\\Villa_photo_home.png",
+      "SourceId": "MagicVilla_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\",
+      "BasePath": "_content/MagicVilla_Web",
+      "RelativePath": "images/home/Villa_photo_home.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home\\Villa_photo_home.png"
     },
     {
       "Identity": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\js\\site.js",

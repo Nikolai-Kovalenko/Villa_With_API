@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\MagicVilla_Web.bundle.scp.css"
     },
     {
+      "Id": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\css\\Bootswatch_Cyborg.css",
+      "PackagePath": "staticwebassets\\css\\Bootswatch_Cyborg.css"
+    },
+    {
       "Id": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\images\\home\\Miami-Villa-Contenta-1.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\Miami-Villa-Contenta-1.jpg"
+    },
+    {
+      "Id": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\images\\home\\Villa_photo_home.png",
+      "PackagePath": "staticwebassets\\images\\home\\Villa_photo_home.png"
     },
     {
       "Id": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\wwwroot\\js\\site.js",
