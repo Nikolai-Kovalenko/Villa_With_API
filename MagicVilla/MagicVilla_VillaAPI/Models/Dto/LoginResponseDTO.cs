@@ -1,8 +1,8 @@
 ﻿namespace MagicVilla_VillaAPI.Models.Dto
 {
-    public class LoggingResponseDTO
+    public class LoginResponseDTO
     {
-        public LocallUser User { get; set; }
+        public LocalUser User { get; set; }
         public string Token { get; set; }
 
     }

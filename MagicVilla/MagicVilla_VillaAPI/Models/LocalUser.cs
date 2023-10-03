@@ -1,6 +1,6 @@
 ﻿namespace MagicVilla_VillaAPI.Models
 {
-    public class LocallUser
+    public class LocalUser
     {
         public int Id { get; set; }
         public string UserName { get; set; }
