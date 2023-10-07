@@ -35,3 +35,10 @@ F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\MagicVilla_Util
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\MagicVilla_Utility.pdb
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\obj\Debug\net7.0\MagicVilla_Web.csproj.CopyComplete
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Newtonsoft.Json.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
