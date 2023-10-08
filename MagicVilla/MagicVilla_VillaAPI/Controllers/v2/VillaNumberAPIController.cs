@@ -35,11 +35,11 @@ namespace MagicVilla_VillaAPI.Controllers.v2
             _dbVilla = dbVilla;
         }
 
-        [HttpGet]
+        [HttpGet("GetString")]
         // [MapToApiVersion("2.0")]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "V2 value1", "V2 value2" };
         }
     }
 }
