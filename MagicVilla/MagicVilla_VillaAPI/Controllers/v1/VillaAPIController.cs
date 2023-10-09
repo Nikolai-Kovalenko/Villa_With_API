@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.Net;
+using System.Text.Json;
 
 namespace MagicVilla_VillaAPI.Controllers.v1
 {
@@ -43,10 +44,10 @@ namespace MagicVilla_VillaAPI.Controllers.v1
             {
                 IEnumerable<Villa> villaList = await _dbVilla.GetAllAsync();
 
-                if(occupancy > 0) 
+                if (occupancy > 0)
                 {
                     villaList = await _dbVilla.GetAllAsync(u => u.Occupancy == occupancy,
-                        pageSize:pageSize, pageNumber:pageNumber);
+                        pageSize: pageSize, pageNumber: pageNumber);
                 }
                 else
                 {
@@ -56,7 +57,9 @@ namespace MagicVilla_VillaAPI.Controllers.v1
                 {
                     villaList = villaList.Where(u => u.Name.ToLower().Contains(serch.ToLower()));
                 }
+                Pagination pagunation = new() { PageNumber = pageNumber, PageSize = pageSize };
 
+                Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(pagunation));
                 _response.Result = _mapper.Map<List<VillaDTO>>(villaList);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);
