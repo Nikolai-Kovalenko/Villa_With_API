@@ -31,6 +31,7 @@ namespace MagicVilla_VillaAPI.Controllers.v1
         }
 
         [HttpGet]
+        [ResponseCache(CacheProfileName = "Default30")]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         // [HttpGet("GetVillas")] // Явно указывает на метод
@@ -56,15 +57,12 @@ namespace MagicVilla_VillaAPI.Controllers.v1
         }
 
         [HttpGet("{id:int}", Name = "GetVilla")]
+        // [ResponseCache(Duration = 30, Location =ResponseCacheLocation.Any)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        // [HttpGet("GetVilla/{id}")] // Явно указывает на метод с id
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        // [ProducesResponseType(200, Type = typeof(VillaDTO))]
-        // [ProducesResponseType(400)]
-        // [ProducesResponseType(404)]
         public async Task<ActionResult<APIResponse>> GetVilla(int id)
         {
             try
