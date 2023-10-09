@@ -38,7 +38,7 @@ namespace MagicVilla_VillaAPI.Controllers.v1
         // [HttpGet("GetVillas")] // Явно указывает на метод
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<APIResponse>> GetVillas([FromQuery(Name = "FilterOccupancy")]int? occupancy,
-            [FromQuery] string? serch, int pageSize = 2, int pageNumber = 1)
+            [FromQuery] string? serch, int pageSize = 0, int pageNumber = 1)
         {
             try
             {
@@ -96,6 +96,7 @@ namespace MagicVilla_VillaAPI.Controllers.v1
                 if(villa == null)
                 {
                     _response.StatusCode = HttpStatusCode.NotFound;
+                    _response.IsSuccess = false;
                     return NotFound(_response);
                 }
                 _response.Result = _mapper.Map<VillaDTO>(villa);
