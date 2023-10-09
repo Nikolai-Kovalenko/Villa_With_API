@@ -36,11 +36,26 @@ namespace MagicVilla_VillaAPI.Controllers.v1
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         // [HttpGet("GetVillas")] // Явно указывает на метод
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<APIResponse>> GetVillas()
+        public async Task<ActionResult<APIResponse>> GetVillas([FromQuery(Name = "FilterOccupancy")]int? occupancy,
+            [FromQuery] string? serch)
         {
             try
             {
                 IEnumerable<Villa> villaList = await _dbVilla.GetAllAsync();
+
+                if(occupancy > 0) 
+                {
+                    villaList = await _dbVilla.GetAllAsync(u => u.Occupancy == occupancy);
+                }
+                else
+                {
+                    villaList = await _dbVilla.GetAllAsync();
+                }
+                if (!string.IsNullOrEmpty(serch))
+                {
+                    villaList = villaList.Where(u => u.Name.ToLower().Contains(serch.ToLower()));
+                }
+
                 _response.Result = _mapper.Map<List<VillaDTO>>(villaList);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);
