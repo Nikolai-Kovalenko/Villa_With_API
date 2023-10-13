@@ -15,15 +15,17 @@ namespace MagicVilla_VillaAPI.Repository
     public class UserRepository : IUserRepository
     {
         private readonly AppDbContext _db;
-        private readonly UserManager<AppUser> _userMnager;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IMapper _mapper;
         private string secretKey;
 
         public UserRepository(AppDbContext db, IConfiguration configuration,
-            UserManager<AppUser> userMnager, IMapper mapper)
+            UserManager<AppUser> userMnager, IMapper mapper, RoleManager<IdentityRole> roleManager)
         {
             _db = db;
-            _userMnager = userMnager;
+            _userManager = userMnager;
+            _roleManager = roleManager;
             _mapper = mapper;
             secretKey = configuration.GetValue<string>("ApiSettings:Secret");
         }
@@ -42,7 +44,7 @@ namespace MagicVilla_VillaAPI.Repository
         {
             var user = _db.AppUsers.FirstOrDefault(u => u.UserName.ToLower() == 
                 logingRequestDTO.Username.ToLower());
-            bool isValid = await _userMnager.CheckPasswordAsync(user, logingRequestDTO.Password);
+            bool isValid = await _userManager.CheckPasswordAsync(user, logingRequestDTO.Password);
 
             if(user == null || isValid == false) 
             {
@@ -55,7 +57,7 @@ namespace MagicVilla_VillaAPI.Repository
 
             // if user was found generete JWT Ttoken
 
-            var roles = await _userMnager.GetRolesAsync(user);
+            var roles = await _userManager.GetRolesAsync(user);
             var tokenHendler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(secretKey);
 
@@ -93,10 +95,17 @@ namespace MagicVilla_VillaAPI.Repository
 
             try
             {
-                var result = await _userMnager.CreateAsync(user, registrationRequestDTO.Password);
-                if(result.Succeeded)
+                var result = await _userManager.CreateAsync(user, registrationRequestDTO.Password);
+
+                if (result.Succeeded)
                 {
-                    await _userMnager.AddToRoleAsync(user, "admin");
+                    if (!_roleManager.RoleExistsAsync("admin").GetAwaiter().GetResult())
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole("admin"));
+                        await _roleManager.CreateAsync(new IdentityRole("customer"));
+                    }
+
+                    await _userManager.AddToRoleAsync(user, "admin");
                     var userToReturn = _db.AppUsers
                         .FirstOrDefault(u => u.UserName == registrationRequestDTO.UserName);
                     return _mapper.Map<UserDTO>(userToReturn);
