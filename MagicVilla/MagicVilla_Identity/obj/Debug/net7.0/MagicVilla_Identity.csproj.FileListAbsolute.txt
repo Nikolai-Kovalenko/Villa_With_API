@@ -1,0 +1,8 @@
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\MagicVilla_Identity.csproj.AssemblyReference.cache
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\MagicVilla_Identity.GeneratedMSBuildEditorConfig.editorconfig
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\MagicVilla_Identity.AssemblyInfoInputs.cache
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\MagicVilla_Identity.AssemblyInfo.cs
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\MagicVilla_Identity.csproj.CoreCompileInputs.cache
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\MagicVilla_Identity.MvcApplicationPartsAssemblyInfo.cache
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\MagicVilla_Identity.RazorAssemblyInfo.cache
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\MagicVilla_Identity.RazorAssemblyInfo.cs
