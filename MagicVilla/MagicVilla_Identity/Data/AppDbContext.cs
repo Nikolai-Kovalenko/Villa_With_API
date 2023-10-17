@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using MagicVilla_Identity.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Reflection.Emit;
 
 namespace MagicVilla_Identity.Data
@@ -10,10 +13,6 @@ namespace MagicVilla_Identity.Data
         }
 
         public DbSet<AppUser> AppUsers { get; set; }
-        public DbSet<LocalUser> LocalUsers { get; set; }
-        public DbSet<Villa> Villas { get; set; }
-        public DbSet<VillaNumber> VillaNumbers { get; set; }
-
     }
 }
 
