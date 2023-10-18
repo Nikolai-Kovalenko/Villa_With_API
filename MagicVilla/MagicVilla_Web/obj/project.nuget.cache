@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "r1MFMjsh9kKO9La49N6EETwYbdkFmD6utK31AuUOZiJCFXwO+gromTJcsQhjYQ4usTN7KOAKZLVAIC/85cOGaQ==",
+  "dgSpecHash": "J1pU2S2CjiXvu+wG6H13SIAKg5+J0EIt0vmIinWggc82ONlA6o37E2R4GOo7nK66hCqkouu08gsQ+HksxHwXug==",
   "success": true,
   "projectFilePath": "F:\\Project\\MagicVilla\\MagicVilla\\MagicVilla_Web\\MagicVilla_Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nik\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\nik\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\nik\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.11\\microsoft.aspnetcore.authentication.jwtbearer.7.0.11.nupkg.sha512",
+    "C:\\Users\\nik\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\7.0.12\\microsoft.aspnetcore.authentication.openidconnect.7.0.12.nupkg.sha512",
     "C:\\Users\\nik\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\nik\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\nik\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",

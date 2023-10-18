@@ -31,15 +31,33 @@ builder.Services.AddSession(options =>
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-              .AddCookie(options =>
-              {
-                  options.Cookie.HttpOnly = true;
-                  options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
-                  options.LoginPath = "/Auth/Login";
-                  options.AccessDeniedPath = "/Auth/AccessDenied";
-                  options.SlidingExpiration = true;
-              });
+builder.Services.AddAuthentication
+    (options =>
+    {
+        options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = "oidc";
+    })
+            .AddCookie(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                options.LoginPath = "/Auth/Login";
+                options.AccessDeniedPath = "/Auth/AccessDenied";
+                options.SlidingExpiration = true;
+            })
+            .AddOpenIdConnect("oidc", options =>
+            {
+                options.Authority = builder.Configuration["ServiceUrls:IdentityAPI"];
+                options.GetClaimsFromUserInfoEndpoint = true;
+                options.ClientId = "magic";
+                options.ClientSecret = "secret";
+                options.ResponseType = "code";
+
+                options.TokenValidationParameters.NameClaimType = "name";
+                options.TokenValidationParameters.RoleClaimType = "role";
+                options.Scope.Add("magic");
+                options.SaveTokens = true;
+            });
 
 var app = builder.Build();
 

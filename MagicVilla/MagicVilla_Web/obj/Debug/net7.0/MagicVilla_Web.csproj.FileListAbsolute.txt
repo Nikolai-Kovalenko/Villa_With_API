@@ -42,3 +42,4 @@ F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.Ident
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
