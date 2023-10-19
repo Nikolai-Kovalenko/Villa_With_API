@@ -45,8 +45,8 @@ namespace MagicVilla_Identity
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.Profile 
                     },
-                    RedirectUris = { "http://localhost:5059/signin-oidc" },
-                    PostLogoutRedirectUris = { "http://localhost:5059/signout-callback-oidc" }
+                    RedirectUris = { "https://localhost:44322/signin-oidc" },
+                    PostLogoutRedirectUris = { "https://localhost:44322/signout-callback-oidc" },
                 }
             };
     }

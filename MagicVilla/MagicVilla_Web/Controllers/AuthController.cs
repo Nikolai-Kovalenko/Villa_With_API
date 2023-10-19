@@ -25,10 +25,12 @@ namespace MagicVilla_Web.Controllers
 
         [HttpGet]
         [Authorize]
-        public IActionResult Login()
+        public async Task<IActionResult> Login()
         {
-            LoginRequestDTO obj = new LoginRequestDTO();
-            return View(obj);
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
+            return RedirectToAction(nameof(Index), "Home");
+            //LoginRequestDTO obj = new LoginRequestDTO();
+            //return View(obj);
         }
 
         [HttpPost]
@@ -84,6 +86,7 @@ namespace MagicVilla_Web.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
+            SignOut("Cookies", "oidc");
             HttpContext.Session.SetString(SD.SessionToken, "");
             return RedirectToAction("Index", "Home");
         }
