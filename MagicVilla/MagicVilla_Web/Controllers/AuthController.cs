@@ -4,6 +4,7 @@ using MagicVilla_Web.Models.Dto;
 using MagicVilla_Web.Services.IServices;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Newtonsoft.Json;
@@ -23,6 +24,7 @@ namespace MagicVilla_Web.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IActionResult Login()
         {
             LoginRequestDTO obj = new LoginRequestDTO();

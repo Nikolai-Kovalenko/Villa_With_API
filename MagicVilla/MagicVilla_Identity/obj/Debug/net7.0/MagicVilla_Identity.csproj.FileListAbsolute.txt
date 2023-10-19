@@ -87,3 +87,4 @@ F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\refint\Mag
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\MagicVilla_Identity.pdb
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\MagicVilla_Identity.genruntimeconfig.cache
 F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\obj\Debug\net7.0\ref\MagicVilla_Identity.dll
+F:\Project\MagicVilla\MagicVilla\MagicVilla_Identity\bin\Debug\net7.0\keys\is-signing-key-B74635EBBFA8A4C7F5E6CC57D9BFB7B6.json
