@@ -1,6 +1,7 @@
 using MagicVilla_Web;
 using MagicVilla_Web.Services;
 using MagicVilla_Web.Services.IServices;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -57,6 +58,8 @@ builder.Services.AddAuthentication
                 options.TokenValidationParameters.RoleClaimType = "role";
                 options.Scope.Add("magic");
                 options.SaveTokens = true;
+
+                options.ClaimActions.MapJsonKey("role", "role");
             });
 
 var app = builder.Build();

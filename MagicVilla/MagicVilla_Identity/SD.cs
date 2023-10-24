@@ -1,5 +1,6 @@
 ﻿using Duende.IdentityServer;
 using Duende.IdentityServer.Models;
+using IdentityModel;
 
 namespace MagicVilla_Identity
 {
@@ -43,7 +44,8 @@ namespace MagicVilla_Identity
                     AllowedScopes = { "magic", 
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Email,
-                        IdentityServerConstants.StandardScopes.Profile 
+                        IdentityServerConstants.StandardScopes.Profile,
+                        JwtClaimTypes.Role
                     },
                     RedirectUris = { "https://localhost:44322/signin-oidc" },
                     PostLogoutRedirectUris = { "https://localhost:44322/signout-callback-oidc" },
